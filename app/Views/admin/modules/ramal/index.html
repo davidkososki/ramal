@@ -1,0 +1,23 @@
+<h1>Ramais</h1>
+<hr><!-- comment -->
+ <a  href="{{URL}}/admin/ramais/new">
+     <button type="button" class="btn btn-success">+ Novo Ramal</button>
+ </a>
+<hr><!-- comment -->
+{{status}}
+<p>Ramais Cadastrados</p>
+<table class="table table-light table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th style="width: 200px;">Nome</th>
+            <th>Telefone</th>
+            <th>Andar</th>
+            <th style="width: 200px;">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+         {{itens}}
+    </tbody>
+</table>
+{{pagination}}

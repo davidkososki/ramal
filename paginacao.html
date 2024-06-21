@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paginação com JavaScript</title>
+  <style>
+   
+  </style>
+</head>
+<body>
+
+<div id="data"></div>
+<ul class="pagination" id="pagination"></ul>
+
+<script>
+  var data = [{"id":1359,"0":1359,"nome":"Graziella Cristopholini Rosa","1":"Graziella Cristopholini Rosa","ramal":"(48) 3664-0148","2":"(48) 3664-0148","departamento":"DIGP\/COMAJ","3":"DIGP\/COMAJ","revenda":"3\u00b0 Andar","4":"3\u00b0 Andar","email":"","5":"","celular":null,"6":null},{"id":1358,"0":1358,"nome":"Maria Olivia de Luca","1":"Maria Olivia de Luca","ramal":"(48) 3664-0049","2":"(48) 3664-0049","departamento":"3\u00b0 Andar","3":"3\u00b0 Andar","revenda":"COMAJ\/DIGP","4":"COMAJ\/DIGP","email":"","5":"","celular":null,"6":null},{"id":1357,"0":1357,"nome":"Zulmara Luiza Gesser  ","1":"Zulmara Luiza Gesser  ","ramal":"(48) 3664-0131 ","2":"(48) 3664-0131 ","departamento":"DIEN\/GEGEF","3":"DIEN\/GEGEF","revenda":"5\u00ba Andar \r\n","4":"5\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1356,"0":1356,"nome":"Zelia Stapazzoli  ","1":"Zelia Stapazzoli  ","ramal":"(48) 3664-0232 ","2":"(48) 3664-0232 ","departamento":"DIGP\/GEPES","3":"DIGP\/GEPES","revenda":"2\u00ba Andar \r\n","4":"2\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1355,"0":1355,"nome":"Zaida Jeronimo Rabello Petry  ","1":"Zaida Jeronimo Rabello Petry  ","ramal":"(48) 3664-0010 ","2":"(48) 3664-0010 ","departamento":"GABS","3":"GABS","revenda":"10\u00ba Andar \r\n","4":"10\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1354,"0":1354,"nome":"Wilmara Soares dos Santos  ","1":"Wilmara Soares dos Santos  ","ramal":"(48) 3664-0344 ","2":"(48) 3664-0344 ","departamento":"DIPE\/GEPEP","3":"DIPE\/GEPEP","revenda":"6\u00ba Andar \r\n","4":"6\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1353,"0":1353,"nome":"Weliton Luiz Torrens  ","1":"Weliton Luiz Torrens  ","ramal":"(48) 3664-0174 ","2":"(48) 3664-0174 ","departamento":"DIAF\/CPESC ","3":"DIAF\/CPESC ","revenda":"7\u00ba Andar \r\n","4":"7\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1352,"0":1352,"nome":"Walter da Luz Filho  ","1":"Walter da Luz Filho  ","ramal":"(48) 3664-0118 ","2":"(48) 3664-0118 ","departamento":"DINE\/GEORE ","3":"DINE\/GEORE ","revenda":"8\u00ba Andar \r\n","4":"8\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1351,"0":1351,"nome":"Walmir Esp\u00edndola Filho  ","1":"Walmir Esp\u00edndola Filho  ","ramal":"(48) 3664-0383 ","2":"(48) 3664-0383 ","departamento":"CONTROLE INTERNO\/ OUVIDORIA","3":"CONTROLE INTERNO\/ OUVIDORIA","revenda":"11\u00ba Andar \r\n","4":"11\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1350,"0":1350,"nome":"Waldemar Rossen Junior  ","1":"Waldemar Rossen Junior  ","ramal":"(48) 3664-0224 ","2":"(48) 3664-0224 ","departamento":"DIGR\/GEADE","3":"DIGR\/GEADE","revenda":"4\u00ba Andar \r\n","4":"4\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1349,"0":1349,"nome":"Volnei Francisco Pereira  ","1":"Volnei Francisco Pereira  ","ramal":"(48) 3664-0035 ","2":"(48) 3664-0035 ","departamento":"DIGP\/GEPES","3":"DIGP\/GEPES","revenda":"2\u00ba Andar \r\n","4":"2\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1348,"0":1348,"nome":"Viviane Silva da Rosa  ","1":"Viviane Silva da Rosa  ","ramal":"(48) 3664-0092 ","2":"(48) 3664-0092 ","departamento":"DIPE\/GEPOE","3":"DIPE\/GEPOE","revenda":"6\u00ba Andar \r\n","4":"6\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1347,"0":1347,"nome":"Viviane Maria Poeta Vieira  ","1":"Viviane Maria Poeta Vieira  ","ramal":"(48) 3664-0029 ","2":"(48) 3664-0029 ","departamento":"DIGP\/GEPES","3":"DIGP\/GEPES","revenda":"2\u00ba Andar \r\n","4":"2\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1346,"0":1346,"nome":"Viviane Maria Pereira  ","1":"Viviane Maria Pereira  ","ramal":"(48) 3664-0171 ","2":"(48) 3664-0171 ","departamento":"DIEN\/GEALI","3":"DIEN\/GEALI","revenda":"4\u00ba Andar \r\n","4":"4\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1345,"0":1345,"nome":"Vivian da Silva Freitas  ","1":"Vivian da Silva Freitas  ","ramal":"(48) 3664-0188 ","2":"(48) 3664-0188 ","departamento":"DIAF\/GEINF ","3":"DIAF\/GEINF ","revenda":"9\u00ba Andar \r\n","4":"9\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1344,"0":1344,"nome":"Vitor Fungaro Balthazar  ","1":"Vitor Fungaro Balthazar  ","ramal":"(48) 3664-0262 ","2":"(48) 3664-0262 ","departamento":"GABSA\/Secret\u00e1rio Adjunto","3":"GABSA\/Secret\u00e1rio Adjunto","revenda":"10\u00ba Andar \r\n","4":"10\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1343,"0":1343,"nome":"Vin\u00edcius Ribeiro Alves  ","1":"Vin\u00edcius Ribeiro Alves  ","ramal":"(48) 3664-0324 ","2":"(48) 3664-0324 ","departamento":"DIEN\/GEREF","3":"DIEN\/GEREF","revenda":"5\u00ba Andar \r\n","4":"5\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1342,"0":1342,"nome":"Vinicius A. Correia  ","1":"Vinicius A. Correia  ","ramal":"(48) 3664-0243 ","2":"(48) 3664-0243 ","departamento":"DIAF\/GEAFI ","3":"DIAF\/GEAFI ","revenda":"9\u00ba Andar \r\n","4":"9\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1341,"0":1341,"nome":"Vilma Luiza Ara\u00fajo  ","1":"Vilma Luiza Ara\u00fajo  ","ramal":"(48) 3664-0170 ","2":"(48) 3664-0170 ","departamento":"DIGR\/GEALI ","3":"DIGR\/GEALI ","revenda":"8\u00ba Andar \r\n","4":"8\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null},{"id":1340,"0":1340,"nome":"Victor Altiere Patr\u00edcio Esp\u00edndola  ","1":"Victor Altiere Patr\u00edcio Esp\u00edndola  ","ramal":"(48) 3664-0258 ","2":"(48) 3664-0258 ","departamento":"DIAF\/GEAFI ","3":"DIAF\/GEAFI ","revenda":"9\u00ba Andar \r\n","4":"9\u00ba Andar \r\n","email":null,"5":null,"celular":null,"6":null}];
+  // Inserir dados para a paginação
+
+
+  var itemsPerPage = 5;
+  var currentPage = 1;
+  var totalPages = Math.ceil(data.length / itemsPerPage);
+
+  function displayData(items, container) {
+
+    
+    var dataContainer = document.getElementById(container);
+        dataContainer.innerHTML = "";
+
+        var inicio = (currentPage - 1) * itemsPerPage;
+        var fim = inicio + itemsPerPage;
+
+        for (var i = inicio; i < fim && i < data.length; i++) {
+            var div = document.createElement('div');
+            div.className = 'card text-dark mb-3';
+
+            var header = document.createElement('h5');
+            header.className = 'card-header';
+            header.textContent = data[i].nome + ' ';
+
+            var small = document.createElement('small');
+            small.textContent = data[i].departamento;
+            header.appendChild(small);
+
+            var body = document.createElement('div');
+            body.className = 'card-body';
+            body.textContent = data[i].ramal;
+
+            div.appendChild(header);
+            div.appendChild(body);
+
+            dataContainer.appendChild(div);
+        }
+    
+    
+  }
+
+  function setupPagination(pages, container) {
+    var pagination = document.getElementById(container);
+    pagination.innerHTML = "";
+
+    for (var i = 1; i <= pages; i++) {
+      var pageItem = document.createElement('li');
+      var pageLink = document.createElement('a');
+      pageLink.href = "#";
+      pageLink.textContent = i;
+
+      if (i === currentPage) {
+        pageLink.classList.add('active');
+      }
+
+      pageLink.addEventListener('click', function () {
+        currentPage = parseInt(this.textContent);
+        displayData(data.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage), 'data');
+        setupPagination(totalPages, 'pagination');
+      });
+
+      pageItem.appendChild(pageLink);
+      pagination.appendChild(pageItem);
+    }
+  }
+
+  displayData(data.slice(0, itemsPerPage), 'data');
+  setupPagination(totalPages, 'pagination');
+</script>
+
+</body>
+</html>
+

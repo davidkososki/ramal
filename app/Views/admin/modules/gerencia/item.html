@@ -1,0 +1,19 @@
+<tr>
+    <td>{{id}}</td>
+    <td>{{nome}}</td>
+    <td>{{sigla}}</td>
+    <td>
+        <select name="diretoria" class="form-control"  required>
+            <option value="">Selecione</option>
+            {{id_diretoria_gerencia}}
+        </select>
+    </td>
+    <td>
+        <a  href="{{URL}}/admin/gerencia/{{id}}/edit">
+            <button type="button" class="btn btn-primary">Editar</button>
+        </a>
+         <a  href="{{URL}}/admin/gerencia/{{id}}/delete">
+            <button type="button" class="btn btn-danger">Excluir</button>
+        </a>
+    </td>
+</tr>

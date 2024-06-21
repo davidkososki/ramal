@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+<hr><!-- comment -->
+ <a  href="{{URL}}/admin/gerencia">
+     <button type="button" class="btn btn-warning">Voltar</button>
+ </a>
+<hr><!-- comment -->
+{{status}}
+<form method="post">
+    <div class="form-group mt-3">
+        <label>Nome</label>
+        <input type="text" name="nome" value="{{nome}}" class="form-control"  required><br>
+    </div>
+    <div class="form-group mt-3">
+        <label>Sigla</label>
+        <input type="text" name="sigla" value="{{sigla}}" class="form-control"  required><br>
+    </div>
+    <div class="form-group mt-3">
+        <label>Diretoria</label>
+        <select name="diretoria" class="form-control"  required>
+            <option value="">Selecione</option>
+            {{id_diretoria_gerencia}}
+        </select>
+    </div>
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </div>
+</form>

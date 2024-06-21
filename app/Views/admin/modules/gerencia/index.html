@@ -1,0 +1,23 @@
+<h1>Gerência</h1>
+<hr><!-- comment -->
+ <a  href="{{URL}}/admin/gerencia/new">
+     <button type="button" class="btn btn-success">+ Nova Gerência</button>
+ </a>
+<hr><!-- comment -->
+{{status}}
+<p>Gerências cadastradas</p>
+<table class="table table-light table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th style="width: 200px;">Nome</th>
+            <th>Sigla</th>
+            <th>Diretoria</th>
+            <th style="width: 200px;">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+       {{itens}}
+    </tbody>
+</table>
+{{pagination}}

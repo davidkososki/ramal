@@ -1,0 +1,18 @@
+{
+    "name": "Sed/Ramal",
+    "description": "Dados dos ramais da SED-SC",
+    "autoload": {
+        "psr-4": {
+            "Sed\\Ramal\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Getig-SED David Kososki"
+        }
+    ],
+    "require": {
+        "william-costa/dot-env": "^0.1.0",
+        "william-costa/database-manager": "^0.1.0"
+    }
+}

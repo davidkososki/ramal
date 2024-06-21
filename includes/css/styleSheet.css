@@ -1,0 +1,47 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 1 de set. de 2023, 16:43:41
+    Author     : david.kososki
+*/
+.search {
+  width: 300px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 3px;
+  transition: width 0.4s ease-in-out;
+}
+
+.search :focus {
+  width: 100%;
+}
+
+ ul.pagination {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+    }
+    ul.pagination li {display: inline;}
+    ul.pagination li a {
+      color: #4CAF50;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 1px solid #ddd;
+      margin: 0 4px;
+    }
+    ul.pagination li a.active {
+      background-color: #4CAF50;
+      color: white;
+      border: 1px solid #4CAF50;
+    }
+    ul.pagination li a:hover:not(.active) {background-color: #ddd;}
